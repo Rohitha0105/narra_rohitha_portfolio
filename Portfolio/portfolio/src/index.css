@@ -1,0 +1,233 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* --- global fixes & variables --- */
+:root {
+  --glass-bg: rgba(255,255,255,0.14);
+  --glass-stroke: rgba(255,255,255,0.20);
+  --accent-1: #B7A6FF;
+  --accent-2: #7BEAFF;
+  --brand: #6D4CFF;
+}
+
+html.dark, html.light {
+  transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevents horizontal scroll */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* app background covering entire viewport */
+.app-bg {
+  background: linear-gradient(180deg, var(--accent-1) 0%, var(--accent-2) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* glass card */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  border-radius: 1.5rem;
+}
+
+/* heading accent */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-title .accent-bar {
+  width: 8px;
+  height: 40px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--brand), rgba(109,76,255,0.6));
+}
+
+/* subtle divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.12), rgba(255,255,255,0));
+  margin: 2.5rem 0;
+}
+
+/* responsive container tweak */
+.container-md {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* glass chip */
+.glass-chip {
+  background: var(--glass-bg);
+  border-radius: 9999px;
+  padding: 8px 14px;
+  border: 1px solid var(--glass-stroke);
+  display: inline-block;
+}
+
+/* MOBILE RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .container-md {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .accent-bar {
+    height: 28px !important;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-avatar {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+  }
+
+  .glass {
+    border-radius: 1.2rem !important;
+  }
+}
+
+/* LIGHT MODE – improved skill cards */
+.skill-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Light mode text */
+.skill-card h3 {
+  color: #1a1a1a !important;
+}
+
+.skill-card span,
+.skill-card li {
+  color: #444 !important;
+}
+
+/* Light mode bar track */
+.light .skill-bar-track {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light mode label */
+.light .skill-label {
+  color: #333 !important;
+}
+
+
+/* ====================== */
+/* DARK MODE THEME FIXES  */
+/* ====================== */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .app-bg {
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.dark .glass {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.55);
+}
+
+.dark .section-title span:last-child {
+  color: white;
+}
+
+.dark .accent-bar {
+  background: linear-gradient(180deg, #7BEAFF, #6D4CFF);
+}
+
+.dark .glass-chip {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.dark h2, .dark h3, .dark h4, .dark p {
+  color: #e8e8e8;
+}
+
+.dark a {
+  color: #c9d9ff;
+}
+
+.dark .navbar {
+  background: rgba(20,20,20,0.4);
+}
+
+.dark footer {
+  color: #bbbbbb;
+}
+
+/* DARK MODE — Skills section fixes */
+.dark .skill-card,
+.dark .glass.skill-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.dark .skill-card h3 {
+  color: #ffffff !important;
+}
+
+.dark .skill-card li {
+  color: #e5e5e5 !important;
+}
+
+.dark .skill-card span {
+  color: #cfd8ff !important;
+}
+
+/* === DARK MODE SKILLS FIX === */
+.dark .skill-text {
+  color: #ffffff !important;
+}
+
+.dark .skill-subtext {
+  color: #dcdcdc !important;
+}
+
+.dark .skill-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 0 20px #7beaff44;
+  border-color: #7beaff66;
+}
+
