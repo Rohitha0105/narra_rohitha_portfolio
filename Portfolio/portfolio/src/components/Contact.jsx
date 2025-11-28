@@ -87,12 +87,14 @@ export default function Contact() {
 
           {/* Email / Gmail */}
           <a
-            href="mailto:narrarohitha@gmail.com"
-            className="text-3xl text-gray-700 dark:text-gray-300 hover:text-[#7BEAFF] dark:hover:text-[#7BEAFF] transition-all hover:scale-110"
-            aria-label="Email"
-          >
-            <FaEnvelope />
-          </a>
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=rohithanarra2502@gmail.com"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="text-3xl hover:text-[#7BEAFF]"
+           >
+             <FaEnvelope />
+           </a>
+
 
           {/* LinkedIn */}
           <a
@@ -125,3 +127,4 @@ export default function Contact() {
     </section>
   );
 }
+
