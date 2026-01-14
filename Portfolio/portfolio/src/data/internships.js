@@ -4,7 +4,7 @@ export const INTERNSHIPS = [
     role: "AI Intern",
     duration: "Oct 2025 – Present",
     bullets: [
-      "Conducting R&D to translate governance problems into scalable AI solutions."
+      "Developed modular pipelines for real-time data processing and analysis."
     ]
   },
   {
@@ -52,3 +52,4 @@ export const INTERNSHIPS = [
     bullets: ["Implemented AI models & algorithms for real-world problems."]
   }
 ];
+
