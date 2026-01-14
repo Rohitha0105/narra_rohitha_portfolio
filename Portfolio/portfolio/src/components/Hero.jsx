@@ -96,7 +96,7 @@ export default function Hero() {
               B.Tech CSE (AI & ML)
             </span>
             <span className="glass-chip dark:text-gray-200">
-              CGPA: 7.6 / 10
+              CGPA: 7.81 / 10
             </span>
           </div>
         </motion.div>
@@ -136,4 +136,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
