@@ -68,7 +68,7 @@ export default function Hero() {
             <button
               onClick={() => {
               const a = document.createElement("a");
-              a.href = "https://drive.google.com/uc?export=download&id=1i8vPWMRfBI6H8SKnRBESa8aN4PHgZPvW";
+              a.href = "https://drive.google.com/uc?export=download&id=1WuclnUjVwTm4fNkSTaHHeJbN5dwPQrwo";
               a.download = "Rohitha-Narra-Resume.pdf";
               document.body.appendChild(a);
               a.click();
@@ -136,3 +136,4 @@ export default function Hero() {
     </section>
   );
 }
+
